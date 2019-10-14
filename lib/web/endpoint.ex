@@ -41,6 +41,22 @@ defmodule Web.Endpoint do
     key_length: 64,
     log: :debug
 
+  plug Web.Context
+
   plug Absinthe.Plug,
-    schema: Web.GraphQL.Schema
+    schema: Web.GraphQL.Schema,
+    before_send: {__MODULE__, :absinthe_before_send}
+
+  def absinthe_before_send(conn, %Absinthe.Blueprint{} = blueprint) do
+    cond do
+      blueprint.execution.context[:_logout] ->
+        configure_session(conn, [drop: true])
+      user_id = blueprint.execution.context[:user_id] ->
+        put_session(conn, :user_id, user_id)
+      true -> conn
+    end
+  end
+  def absinthe_before_send(conn, _) do
+    conn
+  end
 end

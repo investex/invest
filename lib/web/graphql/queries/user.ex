@@ -4,7 +4,7 @@ defmodule Web.GraphQL.Queries.User do
 
   object :user_query do
     @desc "Get the `User` defined by the given `id`."
-    field :user, non_null(:user_payload) do
+    field :user, :user do
       arg :id, non_null(:id)
 
       resolve &resolve/3
@@ -12,6 +12,15 @@ defmodule Web.GraphQL.Queries.User do
   end
 
   def resolve(_parent, %{id: user_id}, _resolution) do
-    {:ok, %{user: Repo.get(User, user_id), errors: []}}
+    User
+    |> Repo.get(user_id)
+    |> process_response
+  end
+
+  defp process_response(record) when record == nil do
+    {:error, "Record not found"}
+  end
+  defp process_response(record) do
+    {:ok, record}
   end
 end
