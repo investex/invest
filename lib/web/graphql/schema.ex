@@ -15,4 +15,9 @@ defmodule Web.GraphQL.Schema do
     import_fields :logout_mutation
     import_fields :authenticate_mutation
   end
+
+  def middleware(middleware, _field, %{identifier: identifier}) when identifier in [:query, :mutation] do
+    middleware ++ [Web.GraphQL.Middleware.ErrorHandling]
+  end
+  def middleware(middleware, _field, _object), do: middleware
 end
