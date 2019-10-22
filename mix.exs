@@ -42,6 +42,7 @@ defmodule Web.MixProject do
       {:poison, "~> 4.0.1"},
       {:redbird, "~> 0.4.0"},
       {:auth, path: "/Users/ryantaylor/Code/invest/auth"},
+      {:persistence, path: "/Users/ryantaylor/Code/invest/persistence"},
       {:rop, git: "https://github.com/ryantaylor/rop.git"},
     ]
   end
