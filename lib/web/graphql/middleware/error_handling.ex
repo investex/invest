@@ -11,8 +11,11 @@ defmodule Web.GraphQL.Middleware.ErrorHandling do
       state: changeset |> Ecto.Changeset.traverse_errors(fn {err, _opts} -> err end)
     }]
   end
-  defp handle_error(%Ecto.NoResultsError{}) do
+  defp handle_error({Ecto.NoResultsError, _}) do
     ["Record not found"]
+  end
+  defp handle_error({Ecto.MultipleResultsError, _}) do
+    ["Expected one record, found multiple"]
   end
   defp handle_error(error), do: [error]
 end
