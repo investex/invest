@@ -41,9 +41,9 @@ defmodule Web.MixProject do
       {:absinthe_plug, "~> 1.4"},
       {:poison, "~> 4.0.1"},
       {:redbird, "~> 0.4.0"},
-      {:auth, git: "https://github.com/investex/auth.git"},
-      {:persistence, git: "https://github.com/investex/persistence.git"},
-      {:rop, git: "https://github.com/ryantaylor/rop.git"},
+      {:auth, git: "https://github.com/investex/auth.git", branch: "master"},
+      {:persistence, git: "https://github.com/investex/persistence.git", branch: "master"},
+      {:rop, git: "https://github.com/ryantaylor/rop.git", branch: "master"},
     ]
   end
 end
