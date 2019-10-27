@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Middleware.AuthLogin do
+defmodule Invest.Web.GraphQL.Middleware.AuthLogin do
   @behaviour Absinthe.Middleware
 
   alias Persistence.User

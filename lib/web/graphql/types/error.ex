@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Types.Error do
+defmodule Invest.Web.GraphQL.Types.Error do
   use Absinthe.Schema.Notation
 
   object :error do

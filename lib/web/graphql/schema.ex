@@ -1,9 +1,9 @@
-defmodule Web.GraphQL.Schema do
+defmodule Invest.Web.GraphQL.Schema do
   use Absinthe.Schema
 
-  import_types Web.GraphQL.Types
-  import_types Web.GraphQL.Queries
-  import_types Web.GraphQL.Mutations
+  import_types Invest.Web.GraphQL.Types
+  import_types Invest.Web.GraphQL.Queries
+  import_types Invest.Web.GraphQL.Mutations
 
   query do
     import_fields :user_query
@@ -17,7 +17,7 @@ defmodule Web.GraphQL.Schema do
   end
 
   def middleware(middleware, _field, %{identifier: identifier}) when identifier in [:query, :mutation] do
-    middleware ++ [Web.GraphQL.Middleware.ErrorHandling]
+    middleware ++ [Invest.Web.GraphQL.Middleware.ErrorHandling]
   end
   def middleware(middleware, _field, _object), do: middleware
 end

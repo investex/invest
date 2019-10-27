@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Middleware.ErrorHandling do
+defmodule Invest.Web.GraphQL.Middleware.ErrorHandling do
   @behaviour Absinthe.Middleware
 
   def call(res, _opts) do

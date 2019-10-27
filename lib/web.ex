@@ -1,4 +1,4 @@
-defmodule Web do
+defmodule Invest.Web do
 #   @moduledoc """
 #   The entrypoint for defining your web interface, such
 #   as controllers, views, channels and so on.
@@ -22,8 +22,8 @@ defmodule Web do
 #       use Phoenix.Controller, namespace: Web
 
 #       import Plug.Conn
-#       import Web.Gettext
-#       alias Web.Router.Helpers, as: Routes
+#       import Invest.Web.Gettext
+#       alias Invest.Web.Router.Helpers, as: Routes
 #     end
 #   end
 
@@ -36,9 +36,9 @@ defmodule Web do
 #       # Import convenience functions from controllers
 #       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-#       import Web.ErrorHelpers
-#       import Web.Gettext
-#       alias Web.Router.Helpers, as: Routes
+#       import Invest.Web.ErrorHelpers
+#       import Invest.Web.Gettext
+#       alias Invest.Web.Router.Helpers, as: Routes
 #     end
 #   end
 
@@ -53,7 +53,7 @@ defmodule Web do
 #   def channel do
 #     quote do
 #       use Phoenix.Channel
-#       import Web.Gettext
+#       import Invest.Web.Gettext
 #     end
 #   end
 

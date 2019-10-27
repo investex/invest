@@ -1,5 +1,5 @@
-defmodule Web.GraphQL.Resolvers.Logout do
-  @behaviour Web.GraphQL.Resolver
+defmodule Invest.Web.GraphQL.Resolvers.Logout do
+  @behaviour Invest.Web.GraphQL.Resolver
   use Rop
 
   def resolve(_parent, _args, %{context: %{current_user: _}}) do

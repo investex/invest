@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Resolvers.GetRecord do
+defmodule Invest.Web.GraphQL.Resolvers.GetRecord do
   alias Persistence.Repo
 
   def resolve(module) do

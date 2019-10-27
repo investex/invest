@@ -1,4 +1,4 @@
-defmodule Web.Context do
+defmodule Invest.Web.Context do
   @behaviour Plug
 
   import Plug.Conn

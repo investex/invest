@@ -1,6 +1,6 @@
-defmodule Web.GraphQL.Queries.Me do
+defmodule Invest.Web.GraphQL.Queries.Me do
   use Absinthe.Schema.Notation
-  alias Web.GraphQL.Resolvers.Me
+  alias Invest.Web.GraphQL.Resolvers.Me
 
   object :me_query do
     @desc "Get the logged in `User`."

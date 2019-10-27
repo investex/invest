@@ -1,7 +1,7 @@
-defmodule Web.GraphQL.Mutations.Authenticate do
+defmodule Invest.Web.GraphQL.Mutations.Authenticate do
   use Absinthe.Schema.Notation
-  alias Web.GraphQL.Middleware.AuthLogin
-  alias Web.GraphQL.Resolvers.Authenticate
+  alias Invest.Web.GraphQL.Middleware.AuthLogin
+  alias Invest.Web.GraphQL.Resolvers.Authenticate
 
   object :authenticate_mutation do
     field :authenticate, type: :user do

@@ -1,7 +1,7 @@
-defmodule Web.GraphQL.Mutations.Register do
+defmodule Invest.Web.GraphQL.Mutations.Register do
   use Absinthe.Schema.Notation
-  alias Web.GraphQL.Middleware.AuthLogin
-  alias Web.GraphQL.Resolvers.Register
+  alias Invest.Web.GraphQL.Middleware.AuthLogin
+  alias Invest.Web.GraphQL.Resolvers.Register
 
   object :register_mutation do
     field :register, type: :user do

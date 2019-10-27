@@ -1,6 +1,6 @@
-defmodule Web.GraphQL.Queries do
+defmodule Invest.Web.GraphQL.Queries do
   use Absinthe.Schema.Notation
 
-  import_types Web.GraphQL.Queries.User
-  import_types Web.GraphQL.Queries.Me
+  import_types Invest.Web.GraphQL.Queries.User
+  import_types Invest.Web.GraphQL.Queries.Me
 end

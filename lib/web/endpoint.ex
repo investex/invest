@@ -1,7 +1,7 @@
-defmodule Web.Endpoint do
-  use Phoenix.Endpoint, otp_app: :web
+defmodule Invest.Web.Endpoint do
+  use Phoenix.Endpoint, otp_app: :invest_web
 
-  # socket "/socket", Web.UserSocket,
+  # socket "/socket", Invest.Web.UserSocket,
   #   websocket: true,
   #   longpoll: false
 
@@ -11,7 +11,7 @@ defmodule Web.Endpoint do
   # when deploying your static files in production.
   # plug Plug.Static,
   #   at: "/",
-  #   from: :web,
+  #   from: :invest_web,
   #   gzip: false,
   #   only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -41,10 +41,10 @@ defmodule Web.Endpoint do
     key_length: 64,
     log: :debug
 
-  plug Web.Context
+  plug Invest.Web.Context
 
   plug Absinthe.Plug,
-    schema: Web.GraphQL.Schema,
+    schema: Invest.Web.GraphQL.Schema,
     before_send: {__MODULE__, :absinthe_before_send}
 
   def absinthe_before_send(conn, %Absinthe.Blueprint{} = blueprint) do

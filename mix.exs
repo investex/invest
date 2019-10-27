@@ -1,9 +1,9 @@
-defmodule Web.MixProject do
+defmodule Invest.Web.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :web,
+      app: :invest_web,
       version: "0.1.0",
       elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Web.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Web.Application, []},
+      mod: {Invest.Web.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -42,7 +42,7 @@ defmodule Web.MixProject do
       {:poison, "~> 4.0.1"},
       {:redbird, "~> 0.4.0"},
       {:auth, git: "https://github.com/investex/auth.git", branch: "master"},
-      {:persistence, git: "https://github.com/investex/persistence.git", branch: "master"},
+      {:invest_persistence, git: "https://github.com/investex/invest_persistence.git", branch: "master"},
       {:rop, git: "https://github.com/ryantaylor/rop.git", branch: "master"},
     ]
   end

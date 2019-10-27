@@ -1,7 +1,7 @@
-defmodule Web.GraphQL.Queries.User do
+defmodule Invest.Web.GraphQL.Queries.User do
   use Absinthe.Schema.Notation
   alias Persistence.User
-  alias Web.GraphQL.Resolvers.GetRecord
+  alias Invest.Web.GraphQL.Resolvers.GetRecord
 
   object :user_query do
     @desc "Get the `User` defined by the given `id`."

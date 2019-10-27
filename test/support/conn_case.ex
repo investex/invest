@@ -1,4 +1,4 @@
-defmodule Web.ConnCase do
+defmodule Invest.Web.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,10 +19,10 @@ defmodule Web.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias Web.Router.Helpers, as: Routes
+      alias Invest.Web.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint Web.Endpoint
+      @endpoint Invest.Web.Endpoint
     end
   end
 

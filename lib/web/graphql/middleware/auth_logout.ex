@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Middleware.AuthLogout do
+defmodule Invest.Web.GraphQL.Middleware.AuthLogout do
   @behaviour Absinthe.Middleware
 
   def call(%{value: true} = res, _opts) do

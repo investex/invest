@@ -1,4 +1,4 @@
-defmodule Web.GraphQL.Types.User do
+defmodule Invest.Web.GraphQL.Types.User do
   use Absinthe.Schema.Notation
 
   @desc "A `User` object."

@@ -10,10 +10,10 @@ use Mix.Config
 config :persistence, ecto_repos: [Persistence.Repo]
 
 # Configures the endpoint
-config :web, Web.Endpoint,
+config :invest_web, Invest.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "nY9BUmxQrd8IOHSucPwchpTjb9aME5PWNuGbNOvWaxrzfHzjPHvEuapAxsDmViYo",
-  pubsub: [name: Web.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Invest.Web.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
